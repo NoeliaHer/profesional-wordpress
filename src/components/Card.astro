@@ -1,0 +1,29 @@
+---
+interface Props {
+	title: string;
+	subtitle: string;
+	imagen: string;
+  url: string;
+}
+
+const { imagen, title, subtitle, url } = Astro.props;
+---
+<div class="mx-16 border-b mb-16">
+  <li class="card text-center p-4">
+    <img src={imagen} alt={subtitle} class="rounded-lg object-cover h-48 md:h-64 lg:h-80 w-full mb-4"/>
+    <div class="p-4">
+      <h2 class="text-3xl p-4">{title}</h2>
+      <p class="text-4xl tex-center text-gray-800 mb-12">{subtitle}</p>
+      <a href={url} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded">
+      Más información
+      </a>
+    </div>
+  </li>
+</div>
+
+<style>
+  .card img {
+    border-radius: 10px;
+    width: 100%;
+  }
+</style>
