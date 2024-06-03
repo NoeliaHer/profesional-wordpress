@@ -1,4 +1,5 @@
 ---
+import type { ImageFunction } from 'astro:content';
 import '/src/styles/global.css';
 
 interface Props {
@@ -6,14 +7,21 @@ interface Props {
   subtitle: string;
   tagline?: string;
   align?: 'start' | 'center';
+  image?: string | { src: string; alt: string };
 }
 
-const { align = 'center', tagline, title, subtitle } = Astro.props;
+const { align = 'center', tagline, title, subtitle, image } = Astro.props;
 ---
 
 <div class:list={['headline', align]}>
   <div class="headline relative lg:w-full h-screen flex items-center justify-center">
-    <div class="background-image absolute inset-0 z-0"></div>
+    <div class="background-image absolute inset-0 z-0 opacity-20">
+      {image && typeof image === 'string' ? (
+        <img src={image} alt="Image" class="w-full h-full object-cover"/>
+      ) : (
+        image && <img src={image.src} alt={image.alt} class="w-full h-full object-cover" />
+      )}
+    </div>
     <div class="relative z-10 text-center">
       <h1 class="text-5xl text-gray-900 p-2 font-sans">{title}</h1>
       <h2 class="text-5xl text-gray-800 p-2 font-cursive">{subtitle}</h2>
@@ -26,12 +34,6 @@ const { align = 'center', tagline, title, subtitle } = Astro.props;
 <style>
   .headline {
     height: 700px;
-  }
-  .background-image {
-    background-image: url('/images/escritorio.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.2;
   }
 
   p{
