@@ -1,14 +1,15 @@
 ---
 interface Props {
-	title: string;
-	subtitle: string;
-	imagen: string;
-  url: string;
+	title?: string;
+	subtitle?: string;
+	imagen?: string;
+  url?: string;
 }
 
 const { imagen, title, subtitle, url } = Astro.props;
 ---
-<div class="mx-12 border-b pb-5">
+
+<div class="mx-12 border-b mb-8">
   <li class="card text-center p-2">
     <img src={imagen} alt={subtitle} class="rounded-lg object-cover h-48 md:h-64 lg:h-94 w-full mb-2"/>
     <div class="p-4">

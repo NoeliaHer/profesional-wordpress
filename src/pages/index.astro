@@ -7,6 +7,8 @@ import Headline2 from '../components/Headline2.astro';
 import Card from '../components/Card.astro';
 import Features from '../components/Features.astro';
 import Features2 from '../components/Features2.astro';
+import Portfolio from '../components/Portfolio.astro';
+
 ---
 
 <Layout title="Profesional Wordpress">
@@ -46,40 +48,40 @@ import Features2 from '../components/Features2.astro';
 			align="center"
 		/>
 
+
 		<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-10">
-			<Card
-			  imagen="/public/images/diseñoweb.jpg"
-			  title="Desde 550€"
-			  subtitle="DISEÑO WEB"
-			  url="/public/images/diseñoweb.jpg"
-			/>
-			<Card
-			  imagen="/public/images/tienda-online.jpg"
-			  title="Desde 800€"
-			  subtitle="TIENDA ONLINE"
-			  url="/public/images/interior-design"
-			/>
-			<Card
-			  imagen="/public/images/seo.jpg"
-			  title="Desde 100€"
-			  subtitle="SEO"
-			  url="/public/images/photography"
-			/>
-		  </ul>
+		<Card
+			imagen="/public/images/diseñoweb.jpg"
+			title="Desde 550€"
+			subtitle="DISEÑO WEB"
+			url="/public/images/diseñoweb.jpg"
+		/>
+		<Card
+			imagen="/public/images/tienda-online.jpg"
+			title="Desde 800€"
+			subtitle="TIENDA ONLINE"
+			url="/public/images/interior-design"
+		/>
+		<Card
+			imagen="/public/images/seo.jpg"
+			title="Desde 100€"
+			subtitle="SEO"
+			url="/public/images/photography"
+		/>
+		</ul>
 
-		  <Features
-		   title="¿Qué necesitas?"
-		   subtitle="Para tu web"
-
+		<Features
+			title="¿Qué necesitas?"
+			subtitle="Para tu web"
 			items={[
-				{ content: "Estoy aquí para elaborarte un sitio web o una tienda online con un diseño elegante y funcional, que sea más fácil de navegar y altamente efectivo." },
-				{ content: "Me encargo de mantener tu sitio web siempre actualizado y en óptimas condiciones. Resolveré cualquier problema técnico que surja en tu plataforma WordPress de manera rápida y eficiente." },
-				{ content: "Diseño estrategias de SEO a medida, específicamente diseñadas para que tu sitio web atraiga un flujo constantes de clientes desde Internet." },
-				{ content: "Estoy disponible para blindarte orientación en todas las áreas relacionadas con la presencia en línea de tu negocio y para colaborar contigo en la definición y refinamiento de tu estrategia digital de manera sólida y efectiva." }
+			{ content: "Estoy aquí para elaborarte un sitio web o una tienda online con un diseño elegante y funcional, que sea más fácil de navegar y altamente efectivo." },
+			{ content: "Me encargo de mantener tu sitio web siempre actualizado y en óptimas condiciones." },
+			{ content: "Diseño estrategias de SEO a medida, específicamente diseñadas para que tu sitio web atraiga un flujo constantes de clientes desde Internet." },
+			{ content: "Estoy disponible para blindarte orientación en todas las áreas relacionadas con la presencia en línea de tu negocio y para colaborar contigo en la definición y refinamiento de tu estrategia digital de manera sólida y efectiva." }
 			]}
-		   />
-	
-		   <Features2
+	  	/>
+		
+		<Features2
 			title="¿Tienes alguno de estos casos?"
 			subtitle="En tu web"
 			items={[
@@ -92,10 +94,20 @@ import Features2 from '../components/Features2.astro';
 				]}
 			title2="!Encuentra el rumbo de tu negocio¡"
 			tagline2="Estudiaré la estrategia adecuada para atraer nuevos clientes, destacar tu presencia de manera sobresaliente y hacer que tus competidores te vean como una amenaza. Mis servicios incluyen opciones de diseño web a partir de 550€."
-			image= {{ src: "/public/images/rombos.jpg", alt: "Imagen de escritorio" }}
-			/>
+			image= {{ src: "/public/images/rombos.jpg", alt: "Ifondo de rombos" }}
+		/>
+
+		<Portfolio
+			title="PORTFOLIO"
+			subtitle="Mis trabajos"
+			tagline={`
+			Soy una especialista en revolucionar tu estrategia online para atraer nuevos clientes, destacar tu
+			presencia web de manera sobresaliente y hacer que tus competidores te vean como una amenaza. Mis servicios
+			incluyen opciones de diseño web a partir de 550€, planes de mantenimiento desde 50€ al mes, tiendas en 
+			línea completas desde 800€ y planes SEO avanzados diseñados especialmente para satisfacer las necesidades
+			de tu proyecto.
+			`}
+			align="center"
+		/>
 	</main>
 </Layout>
-
-
-

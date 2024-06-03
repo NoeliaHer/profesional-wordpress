@@ -4,7 +4,7 @@ import Icono from '../styles/global.css';
 const { align = 'center', title, subtitle, items } = Astro.props;
 
 interface Item {
-  content: string;
+content: string;
 }
 
 ---
@@ -15,7 +15,7 @@ interface Item {
             {items.map((item: Item, index: number) => (
                 <div class="border rounded-lg shadow-lg p-2 flex items-center justify-start w-full m-2" key={index}>
                     <i class="fa-solid fa-check-double mr-6"></i>
-                    <p class="text-left text-md text-gray-800 py-2">{item.content}</p>
+                    <p class="text-left text-lg text-gray-800 my-2">{item.content}</p>
                 </div>
             ))}
         </div>

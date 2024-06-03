@@ -20,7 +20,7 @@ const { tagline2, title2, image } = Astro.props;
         <Headline2 title={title} subtitle={subtitle}/>
         <div class="absolute inset-0 z-0">
             {image && typeof image === 'string' ? (
-            <img src={image} alt="Image" classe="w-full h-full object-cover opacity-50" />
+            <img src={image} alt="Image" class="w-full h-full object-cover opacity-50" />
             ) : (
             image && <img src={image.src} alt={image.alt} class="w-full h-full object-cover opacity-20" />
             )}
