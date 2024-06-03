@@ -11,11 +11,11 @@ interface Item {
 <Headline2 title={title} subtitle={subtitle}/>
 <div class="container mx-auto">
     <fragment>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 contenedor items-center justify-start">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 contenedor items-center justify-start">
             {items.map((item: Item, index: number) => (
-                <div class="border rounded-lg shadow-lg p-2 flex items-center justify-start w-full m-4" key={index}>
+                <div class="border rounded-lg shadow-lg p-2 flex items-center justify-start w-full m-2" key={index}>
                     <i class="fa-solid fa-check-double mr-6"></i>
-                    <p class="text-left text-lg text-gray-800 my-2">{item.content}</p>
+                    <p class="text-left text-md text-gray-800 py-2">{item.content}</p>
                 </div>
             ))}
         </div>
@@ -26,9 +26,8 @@ interface Item {
     .icon {
         font-size: 32px;
     }
-
     .contenedor{
-        max-width: 90%; /* Establece el ancho máximo del contenedor al 80% del ancho de la pantalla */
+        max-width: 100%; /* Establece el ancho máximo del contenedor al 80% del ancho de la pantalla */
         margin: 0 auto;
     }
 </style>
