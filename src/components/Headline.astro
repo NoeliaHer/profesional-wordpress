@@ -6,27 +6,15 @@ interface Props {
   subtitle: string;
   tagline?: string;
   align?: 'start' | 'center';
-<<<<<<< HEAD
-}
-
-const { align = 'center', tagline, title, subtitle } = Astro.props;
-=======
   image?: string | { src: string; alt: string };
 }
 
 const { align = 'center', tagline, title, subtitle, image } = Astro.props;
->>>>>>> f83c098e393c7372bcdb6ef1e4afc585721d4ba0
+
 ---
 
 <div class:list={['headline', align]}>
   <div class="headline relative lg:w-full h-screen flex items-center justify-center">
-<<<<<<< HEAD
-    <div class="background-image absolute inset-0 z-0"></div>
-    <div class="relative z-10 text-center">
-      <h1 class="text-5xl text-gray-900 p-2 font-sans">{title}</h1>
-      <h2 class="text-5xl text-gray-800 p-2 font-cursive">{subtitle}</h2>
-      <p class="text-2xl text-gray-800 my-2">{tagline}</p>
-=======
     <div class="background-image absolute inset-0 z-0 opacity-20">
       {image && typeof image === 'string' ? (
         <img src={image} alt="Image" class="w-full h-full object-cover"/>
@@ -38,28 +26,17 @@ const { align = 'center', tagline, title, subtitle, image } = Astro.props;
       <h1 class="text-4xl text-gray-900 p-2 font-sans">{title}</h1>
       <h2 class="text-4xl text-gray-800 p-2 font-cursive">{subtitle}</h2>
       <p class="text-xl text-gray-800 my-2">{tagline}</p>
->>>>>>> f83c098e393c7372bcdb6ef1e4afc585721d4ba0
     </div>
   </div>
 </div>
 
-
 <style>
   .headline {
-<<<<<<< HEAD
-    height: 700px;
-  }
-  .background-image {
-    background-image: url('/images/escritorio.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.2;
-=======
     height: 520px;
->>>>>>> f83c098e393c7372bcdb6ef1e4afc585721d4ba0
   }
 
-  p{
+  p {
     width: 800px;
   }
-  </style>
+</style>
+
