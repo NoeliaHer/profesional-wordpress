@@ -10,6 +10,7 @@ interface Props {
 }
 
 const { align = 'center', tagline, title, subtitle, image } = Astro.props;
+
 ---
 
 <div class:list={['headline', align]}>
@@ -29,13 +30,13 @@ const { align = 'center', tagline, title, subtitle, image } = Astro.props;
   </div>
 </div>
 
-
 <style>
   .headline {
     height: 520px;
   }
 
-  p{
+  p {
     width: 800px;
   }
-  </style>
+</style>
+
