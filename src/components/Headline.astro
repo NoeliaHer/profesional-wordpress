@@ -1,0 +1,40 @@
+---
+import '/src/styles/global.css';
+
+interface Props {
+  title: string;
+  subtitle: string;
+  tagline?: string;
+  align?: 'start' | 'center';
+}
+
+const { align = 'center', tagline, title, subtitle } = Astro.props;
+---
+
+<div class:list={['headline', align]}>
+  <div class="headline relative lg:w-full h-screen flex items-center justify-center">
+    <div class="background-image absolute inset-0 z-0"></div>
+    <div class="relative z-10 text-center">
+      <h1 class="text-5xl text-gray-900 p-2 font-sans">{title}</h1>
+      <h2 class="text-5xl text-gray-800 p-2 font-cursive">{subtitle}</h2>
+      <p class="text-2xl text-gray-800 my-2">{tagline}</p>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  .headline {
+    height: 700px;
+  }
+  .background-image {
+    background-image: url('/images/escritorio.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+  }
+
+  p{
+    width: 800px;
+  }
+  </style>
