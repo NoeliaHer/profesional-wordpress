@@ -1,5 +1,4 @@
 ---
-import type { ImageFunction } from 'astro:content';
 import '/src/styles/global.css';
 
 interface Props {
@@ -23,9 +22,9 @@ const { align = 'center', tagline, title, subtitle, image } = Astro.props;
       )}
     </div>
     <div class="relative z-10 text-center">
-      <h1 class="text-5xl text-gray-900 p-2 font-sans">{title}</h1>
-      <h2 class="text-5xl text-gray-800 p-2 font-cursive">{subtitle}</h2>
-      <p class="text-2xl text-gray-800 my-2">{tagline}</p>
+      <h1 class="text-4xl text-gray-900 p-2 font-sans">{title}</h1>
+      <h2 class="text-4xl text-gray-800 p-2 font-cursive">{subtitle}</h2>
+      <p class="text-xl text-gray-800 my-2">{tagline}</p>
     </div>
   </div>
 </div>
@@ -33,7 +32,7 @@ const { align = 'center', tagline, title, subtitle, image } = Astro.props;
 
 <style>
   .headline {
-    height: 700px;
+    height: 520px;
   }
 
   p{

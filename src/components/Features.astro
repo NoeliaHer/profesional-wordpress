@@ -9,14 +9,13 @@ interface Item {
 
 ---
 <Headline2 title={title} subtitle={subtitle}/>
-
 <div class="container mx-auto">
     <fragment>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 contenedor items-center justify-start">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 contenedor items-center justify-start">
             {items.map((item: Item, index: number) => (
-                <div class="border rounded-lg shadow-lg p-4 flex items-center justify-start w-full m-6" key={index}>
+                <div class="border rounded-lg shadow-lg p-2 flex items-center justify-start w-full m-4" key={index}>
                     <i class="fa-solid fa-check-double mr-6"></i>
-                    <p class="text-left text-2xl text-gray-800 my-2">{item.content}</p>
+                    <p class="text-left text-lg text-gray-800 my-2">{item.content}</p>
                 </div>
             ))}
         </div>
