@@ -12,14 +12,16 @@ import Features from '../components/Features.astro';
 <Layout title="Profesional Wordpress">
 	<Nav />
 	<main class="p-2">
-		<Headline
-			title="DISEÑO Y MANTENIMIENTO WEB"
-			subtitle="Para tu negocio"
-			tagline="Diseño web, tiendas online, seo y mantenimiento web para pequeños negocios, profesionales independientes, frrelancers, proyectos personales y startups."
-			align="center"
-			image= {{ src: "/public/images/escritorio.jpg", alt: "Imagen de escritorio" }}
-		/>
-
+		<div class="headline relative lg:w-full flex items-center justify-center" style="height: 480px;">
+			<Headline
+				title="DISEÑO Y MANTENIMIENTO WEB"
+				subtitle="Para tu negocio"
+				tagline="Diseño web, tiendas online, seo y mantenimiento web para pequeños negocios, profesionales independientes, frrelancers, proyectos personales y startups."
+				align="center"
+				image= {{ src: "/public/images/escritorio.jpg", alt: "Imagen de escritorio" }}
+			/>
+		</div>
+		
 		<SectionHeading
 			tagline={`
 				Soy Vanessa, y estoy aquí para ayudarte a brillar en el mundo digital. Ya sea con un sitio web que cause sensación o con estrategias astutas de SEO, mi objetivo es hacer que tu presencia online no solo sea efectiva, sino también un éxito rentable.

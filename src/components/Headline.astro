@@ -3,7 +3,7 @@ import '/src/styles/global.css';
 
 interface Props {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   tagline?: string;
   align?: 'start' | 'center';
   image?: string | { src: string; alt: string };
@@ -13,28 +13,22 @@ const { align = 'center', tagline, title, subtitle, image } = Astro.props;
 ---
 
 <div class:list={['headline', align]}>
-  <div class="headline relative lg:w-full h-screen flex items-center justify-center">
-    <div class="background-image absolute inset-0 z-0 opacity-20">
-      {image && typeof image === 'string' ? (
-        <img src={image} alt="Image" class="w-full h-full object-cover"/>
-      ) : (
-        image && <img src={image.src} alt={image.alt} class="w-full h-full object-cover" />
-      )}
-    </div>
-    <div class="relative z-10 text-center">
-      <h1 class="text-4xl text-gray-900 p-2 font-sans">{title}</h1>
-      <h2 class="text-4xl text-gray-800 p-2 font-cursive">{subtitle}</h2>
-      <p class="text-xl text-gray-800 my-2">{tagline}</p>
-    </div>
+  <div class="background-image absolute inset-0 z-0 opacity-20">
+    {image && typeof image === 'string' ? (
+      <img src={image} alt="Image" class="w-full h-full object-cover"/>
+    ) : (
+      image && <img src={image.src} alt={image.alt} class="w-full h-full object-cover" />
+    )}
+  </div>
+  <div class="relative z-10 text-center">
+    <h1 class="text-4xl text-gray-900 p-2 font-sans">{title}</h1>
+    <h2 class="text-4xl text-gray-800 p-2 font-cursive">{subtitle}</h2>
+    <p class="text-xl text-gray-800 my-2">{tagline}</p>
   </div>
 </div>
 
 
 <style>
-  .headline {
-    height: 520px;
-  }
-
   p{
     width: 800px;
   }
