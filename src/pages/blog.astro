@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import BlogCard from '../components/BlogCard.astro';
+
+const blogPosts = [
+  {
+    title: "Mantenimiento Web: La clave del exito",
+    image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+    link: "#"
+  },
+  {
+    title: "Experiencia móvil perfecta: Mantenimiento para todos los dispositivos",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+    link: "#"
+  },
+  {
+    title: "La importancia de una página web profesional para tu nuevo negocio",
+    image: "https://images.unsplash.com/photo-1599423300746-b62533397364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+    link: "#"
+  },
+  {
+    title: "WordPress, ¿es seguro?",
+    image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+    link: "#"
+  },
+  {
+    title: "Por qué es importante la seguridad web: Cómo los ciberataques pueden dañar su negocio",
+    image: "https://images.unsplash.com/photo-1590490356747-d10b7174a172?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+    link: "#"
+  },
+  {
+    title: "Cambia el wp-admin para añadir una capa de seguridad a tu wordpress",
+    image: "https://images.unsplash.com/photo-1580657038999-4498f635e691?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+    link: "#"
+  },
+  {
+    title: "Por qué su sitio web necesita una auditoría: La Importancia de la Auditoría Web",
+    image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+    link: "#"
+  },
+  {
+    title: "Por qué el mantenimiento web es crucial para el SEO y cómo mantenerse a la vanguardia",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+    link: "#"
+  },
+  {
+    title: "9 errores comunes de diseño web que están perjudicando a tu negocio online",
+    image: "https://images.unsplash.com/photo-1599423300746-b62533397364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+    link: "#"
+  },
+  {
+    title: "La importancia del mantenimiento WordPress",
+    image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+    link: "#"
+  },
+  {
+    title: "Hablemos de que es WordPress",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+    link: "#"
+  },
+];
+---
+
+<Layout title="Profesional Wordpress">
+  <Nav />
+  <section class="container mx-auto px-5 py-24">
+    <h1 class="text-3xl font-bold mb-8">Blog</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {blogPosts.map((post) => (
+        <div class="mb-8">
+          <BlogCard 
+            title={post.title}
+            image={post.image}
+            link={post.link}
+          />
+        </div>
+      ))}
+    </div>
+  </section>
+</Layout>
