@@ -4,9 +4,9 @@ import Headline2 from './Headline2.astro';
 const { align = 'center', title, subtitle, tagline, cards } = Astro.props;
 
 interface Card {
-  title: string;
-  description: string;
-  link: string;
+  title?: string;
+  description?: string;
+  link?: string;
   image: string;
 }
 ---
