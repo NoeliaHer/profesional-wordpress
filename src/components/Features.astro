@@ -1,13 +1,12 @@
 ---
 import Headline2 from './Headline2.astro';
-import Icono from '../styles/global.css';
-const { align = 'center', title, subtitle, items } = Astro.props;
+const { align = 'center', title, subtitle, items, customSubtitle } = Astro.props;
 
 interface Item {
-content: string;
+  content: string;
 }
-
 ---
+
 <Headline2 title={title} subtitle={subtitle}/>
 <div class="container mx-auto">
     <fragment>
@@ -31,3 +30,4 @@ content: string;
         margin: 0 auto;
     }
 </style>
+

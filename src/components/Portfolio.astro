@@ -13,13 +13,5 @@ interface Card {
 
 <Headline2 title={title} subtitle={subtitle} tagline={tagline} align='center'/>
 <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-    {cards.map((card: Card, index: number) => (
-      <a href={card.link} key={index} class="block border rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
-        <img src={card.image} alt={card.title} class="w-full h-48 object-cover"/>
-        <div class="p-6 bg-white">
-          <h3 class="text-xl font-bold mb-2">{card.title}</h3>
-          <p class="text-gray-700">{card.description}</p>
-        </div>
-      </a>
-    ))}
-  </div>
+  
+</div>

@@ -2,25 +2,65 @@
 import Layout from '../layouts/Layout.astro';
 import Headline from '../components/Headline.astro';
 import Nav from '../components/Nav.astro';
-import SectionHeading from '../components/SectionHeading.astro';
-import Headline2 from '../components/Headline2.astro';
-import Card from '../components/Card.astro';
 import Features from '../components/Features.astro';
+import FeaturesSection from '../components/FeaturesSections.astro';
+
+const featuresItems = [
+  { content: "¿Tu sitio web actual ha quedado anticuado y ya es hora de actualizarlo para impulsar tu negocio?" },
+  { content: "¿Cuentas con un producto excepcional y ofreces un servicio impecable, pero estás pasando desapercibido en Internet debido a deficiencias en tu estrategia de SEO?" },
+  { content: "¿Estás agotado de los videotutoriales que prometen 'Hacer tu sitio web en tres horas sin conocimientos' y estás en busca de un profesional que se encargue de todo el proceso?" },
+  { content: "¿Te preparas para adentrarte en el mundo del comercio online y requieres una tienda virtual que sea segura, sólida y altamente eficiente?" },
+  { content: "¿Te sientes un tanto desorientado y no sabes cómo abordar temas como el hosting, el dominio, o la creación de un logo, y buscas asesoramiento experto y confiable?" },
+  { content: "¿Te encuentras en las etapas iniciales de lanzar un proyecto empresarial y necesitas una página web que respalde tu estrategia comercial?" },
+];
+
+const featuresSectionItems = [
+  { title: "SEO PARA TODOS", content: "En todos los proyectos que acepto, implemento un plan SEO inicial que abarca una optimización exhaustiva del código, la configuración de etiquetas h1 y h2, la mejora de los atributos ALT de las imágenes, y una indexación manual en Google." },
+  { title: "RECURSOS DE ALTA CALIDAD", content: "Siempre opto por plantillas premium de WordPress, específicamente destacando mi experiencia con DIVI. Asimismo, selecciono cuidadosamente plugins que son plenamente compatibles con esta plantilla, ofreciendo estabilidad probada en múltiples sitios web. Mi enfoque prioritario es invertir en la seguridad y estabilidad de los proyectos en los que trabajo." },
+  { title: "ADAPTABILIDAD", content: "Me enfoco exclusivamente en colaborar con pequeñas empresas, profesionales independientes, proyectos personales y startups. Por lo tanto, puedes estar seguro de que al solicitar un presupuesto, no encontrarás tarifas elevadas ni procesos impersonales como los de grandes corporaciones. Para mí, cada proyecto web no es simplemente otro en una lista, sino una oportunidad para comprender tu negocio y participar activamente en la misión de hacerlo más rentable y eficiente." },
+  { title: "SERVICIOS VARIOS", content: "Ofreceré una amplia gama de servicios a tu disposición, que incluyen diseño web, mantenimiento de WordPress, optimización SEO, desarrollo de tiendas en línea, configuración de plataformas para cursos en línea, integración de sistemas de reservas, implementación de chats en vivo y soporte técnico, entre otros." },
+  { title: "RGPD", content: "Todos los proyectos han sido completamente ajustados a las nuevas regulaciones de RGPD, lo que garantiza que todos los clientes puedan tener total tranquilidad en este aspecto." },
+  { title: "TEXTOS DE CALIDAD", content: "Doy un enfoque especial a la calidad de los textos, la ortografía, la redacción efectiva del mensaje y la coherencia en el contenido. Estoy firmemente convencida de que esto es fundamental en cada proyecto." }
+];
+
+const featuresSectionIcons = [
+  "fa-solid fa-search", // Icon for SEO PARA TODOS
+  "fa-solid fa-tools", // Icon for RECURSOS DE ALTA CALIDAD
+  "fa-solid fa-user-tie", // Icon for ADAPTABILIDAD
+  "fa-solid fa-cogs", // Icon for SERVICIOS VARIOS
+  "fa-solid fa-shield-alt", // Icon for RGPD
+  "fa-solid fa-file-alt" // Icon for TEXTOS DE CALIDAD
+];
+
+const customSubtitle = "¡Encuentra el rumbo de tu negocio!";
+const backgroundImage = "/public/images/contratar.jpg"; // Reemplaza con la URL de tu imagen de fondo
 ---
 
 <Layout title="Profesional Wordpress">
   <Nav />
   <main class="p-2">
-    <div class="relative z-10 text-center">
+    <div class="headline relative lg:w-full h-screen flex items-center justify-center">
       <Headline
         title="DISEÑO WEB"
         align="center"
         image={{ src: "/public/images/disenoweb.jpg", alt: "Imagen de escritorio" }}
       />
-      <div class="icon-container" style="margin-top: 0;">
-        <i class="fas fa-laptop fa-4x"></i> <!-- Icono de ordenador más grande -->
-      </div>
     </div>
+    <div class="icon-container" style="text-align: center; margin-top: 0;">
+      <i class="fas fa-laptop fa-4x"></i> <!-- Icono de ordenador más grande -->
+    </div>
+    <Features 
+      title="¿TIENES ALGUNOS DE ESTOS CASOS?"
+      subtitle="En tu web"
+      items={featuresItems}
+      customSubtitle={customSubtitle}
+    />
+    <FeaturesSection 
+      title="¿POR QUÉ CONTRATARME?"
+      subtitle="LA ESENCIA DE MIS SERVICIOS"
+      items={featuresSectionItems}
+      icons={featuresSectionIcons}
+      backgroundImage={backgroundImage}
+    />
   </main>
 </Layout>
-
