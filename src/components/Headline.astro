@@ -3,7 +3,7 @@ import '/src/styles/global.css';
 
 interface Props {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   tagline?: string;
   align?: 'start' | 'center';
   image?: string | { src: string; alt: string };
@@ -15,7 +15,6 @@ const { align = 'center', tagline, title, subtitle, image, icon } = Astro.props;
 ---
 
 <div class:list={['headline', align]}>
-  
     <div class="background-image absolute inset-0 z-0 opacity-20">
       {image && typeof image === 'string' ? (
         <img src={image} alt="Image" class="w-full h-full object-cover"/>
@@ -26,19 +25,14 @@ const { align = 'center', tagline, title, subtitle, image, icon } = Astro.props;
     <div class="relative z-10 text-center">
       <h1 class="text-4xl text-gray-900 p-2 font-sans">{title}</h1>
       <div class="icon-container" style="text-align: center; margin-top: 0;">
-        <i class="fas fa-laptop fa-4x"></i> <!-- Icono de ordenador más grande -->
+        <i class="fas fa-laptop fa-4x"></i>
       </div>
       <h2 class="text-4xl text-gray-800 p-2 font-cursive">{subtitle}</h2>
       <p class="text-xl text-gray-800 my-2">{tagline}</p>
     </div>
   </div>
 
-
 <style>
-  .headline {
-    height: 520px;
-  }
-
   p {
     width: 800px;
   }

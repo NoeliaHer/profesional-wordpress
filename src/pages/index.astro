@@ -5,76 +5,183 @@ import Nav from '../components/Nav.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import Headline2 from '../components/Headline2.astro';
 import Card from '../components/Card.astro';
+import Card2 from '../components/Card2.astro';
 import Features from '../components/Features.astro';
+import Features2 from '../components/Features2.astro';
+import Portfolio from '../components/Portfolio.astro';
+import BlogCard2 from '../components/BlogCard2.astro';
+
+
+const blogPosts = [
+  {
+    title: "Mantenimiento Web: La clave del exito",
+    image: "/public/images/mantenimiento_web_profesional.jpg",
+    link: "/blog/mantenimientoweb"
+  },
+  {
+    title: "Experiencia móvil perfecta: Mantenimiento para todos los dispositivos",
+    image: "/public/images/experiencia_movil.jpg",
+    link: "#"
+  },
+  {
+    title: "La importancia de una página web profesional para tu nuevo negocio",
+    image: "https://images.unsplash.com/photo-1599423300746-b62533397364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+    link: "#"
+  },
+];
+
 ---
 
 <Layout title="Profesional Wordpress">
-  <Nav />
-  <main class="p-2">
-	<div class="headline relative lg:w-full h-screen flex items-center justify-center">
-    <Headline
-      title="DISEÑO Y MANTENIMIENTO WEB"
-      subtitle="Para tu negocio"
-      tagline="Diseño web, tiendas online, seo y mantenimiento web para pequeños negocios, profesionales independientes, frrelancers, proyectos personales y startups."
-      align="center"
-      image={{ src: "/public/images/escritorio.jpg", alt: "Imagen de escritorio" }}
-  		/>
-    </div>
+	<Nav />
+	<main class="p-2">
+		<div class="headline relative lg:w-full flex items-center justify-center" style="height: 480px;">
+			<Headline
+				title="DISEÑO Y MANTENIMIENTO WEB"
+				subtitle="Para tu negocio"
+				tagline="Diseño web, tiendas online, seo y mantenimiento web para pequeños negocios, profesionales independientes, frrelancers, proyectos personales y startups."
+				align="center"
+				image= {{ src: "/public/images/escritorio.jpg", alt: "Imagen de escritorio" }}
+			/>
+		</div>
 
-    <SectionHeading
-      tagline={`
-        Soy Vanessa, y estoy aquí para ayudarte a brillar en el mundo digital. Ya sea con un sitio web que cause sensación o con estrategias astutas de SEO, mi objetivo es hacer que tu presencia online no solo sea efectiva, sino también un éxito rentable.
-        Si buscas un sitio web que sea una mezcla perfecta de estilo y funcionalidad, capaz de generar resultados palpables, ¡has llegado al lugar adecuado! Estoy emocionada de darte la bienvenida. ¿Listos para crear algo increíble juntos?
-      `}
-      imageUrl="/images/pw.png"
-    />
+		<SectionHeading
+			tagline={`
+				Soy Vanessa, y estoy aquí para ayudarte a brillar en el mundo digital. Ya sea con un sitio web que cause sensación o con estrategias astutas de SEO, mi objetivo es hacer que tu presencia online no solo sea efectiva, sino también un éxito rentable.
+				Si buscas un sitio web que sea una mezcla perfecta de estilo y funcionalidad, capaz de generar resultados palpables, ¡has llegado al lugar adecuado! Estoy emocionada de darte la bienvenida. ¿Listos para crear algo increíble juntos?
+			`}
+			imageUrl="/images/pw.png"
+		/>
 
-    <Headline2
-      title="TARIFAS EXCLUSIVAS"
-      subtitle="Para tu proyecto"
-      tagline={`
-        Te ofrezco tarifas de diseño web especialmente adaptadas para pequeñas empresas, renovaciones de
-        sitios web obsoletos o proyectos nuevos en sus inicios. En todos mis trabajos, empleo materiales de alta
-        calidad para crear sitios web atractivos, seguros, sólidos y altamente rentables.
-        
-        Pongo a tu alcance tarifas directas y muy completas, con una excelente relación entre calidad y precio.
-        Esto te permite llevar a cabo tus planes de negocio, revitalizar la presencia en línea de tu empresa,
-        iniciar la venta de tus productos y contar con la seguridad de que tu imagen en Internet será impecable 
-        en todo momento.
-      `}
-      align="center"
-    />
+		<Headline2
+			title="TARIFAS EXCLUSIVAS"
+			subtitle="Para tu proyecto"
+			tagline={`
+			Te ofrezco tarifas de diseño web especialmente adaptadas para pequeñas empresas, renovaciones de
+			sitios web obsoletos o proyectos nuevos en sus inicios. En todos mis trabajos, empleo materiales de alta
+			calidad para crear sitios web atractivos, seguros, sólidos y altamente rentables.
 
-    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-10">
-      <Card
-        imagen="/public/images/diseñoweb.jpg"
-        title="Desde 550€"
-        subtitle="DISEÑO WEB"
-        url="/public/images/diseñoweb.jpg"
-      />
-      <Card
-        imagen="/public/images/tienda-online.jpg"
-        title="Desde 800€"
-        subtitle="TIENDA ONLINE"
-        url="/public/images/interior-design"
-      />
-      <Card
-        imagen="/public/images/seo.jpg"
-        title="Desde 100€"
-        subtitle="SEO"
-        url="/public/images/photography"
-      />
-    </ul>
+			Pongo a tu alcance tarifas directas y muy completas, con una excelente relación entre calidad y precio.
+			Esto te permite llevar a cabo tus planes de negocio, revitalizar la presencia en línea de tu empresa,
+			iniciar la venta de tus productos y contar con la seguridad de que tu imagen en Internet será impecable 
+			en todo momento.
+			`}
+			align="center"
+		/>
 
-    <Features
-      title="¿Qué necesitas?"
-      subtitle="Para tu web"
-      items={[
-        { content: "Estoy aquí para elaborarte un sitio web o una tienda online con un diseño elegante y funcional, que sea más fácil de navegar y altamente efectivo." },
-        { content: "Me encargo de mantener tu sitio web siempre actualizado y en óptimas condiciones." },
-        { content: "Diseño estrategias de SEO a medida, específicamente diseñadas para que tu sitio web atraiga un flujo constantes de clientes desde Internet." },
-        { content: "Estoy disponible para blindarte orientación en todas las áreas relacionadas con la presencia en línea de tu negocio y para colaborar contigo en la definición y refinamiento de tu estrategia digital de manera sólida y efectiva." }
-      ]}
-    />
-  </main>
+		<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-10">
+			<Card
+				imagen="/public/images/diseñoweb.jpg"
+				title="Desde 550€"
+				subtitle="DISEÑO WEB"
+				url="/public/images/diseñoweb.jpg"
+			/>
+			<Card
+				imagen="/public/images/tienda-online.jpg"
+				title="Desde 800€"
+				subtitle="TIENDA ONLINE"
+				url="/public/images/interior-design"
+			/>
+			<Card
+				imagen="/public/images/seo.jpg"
+				title="Desde 100€"
+				subtitle="SEO"
+				url="/public/images/photography"
+			/>
+		</ul>
+
+		<Features
+			title="¿Qué necesitas?"
+			subtitle="Para tu web"
+			items={[
+			{ content: "Estoy aquí para elaborarte un sitio web o una tienda online con un diseño elegante y funcional, que sea más fácil de navegar y altamente efectivo." },
+			{ content: "Me encargo de mantener tu sitio web siempre actualizado y en óptimas condiciones." },
+			{ content: "Diseño estrategias de SEO a medida, específicamente diseñadas para que tu sitio web atraiga un flujo constantes de clientes desde Internet." },
+			{ content: "Estoy disponible para blindarte orientación en todas las áreas relacionadas con la presencia en línea de tu negocio y para colaborar contigo en la definición y refinamiento de tu estrategia digital de manera sólida y efectiva." }
+			]}
+	  	/>
+		
+		<Features2
+			title="¿Tienes alguno de estos casos?"
+			subtitle="En tu web"
+			items={[
+					{ content: "¿Tu sitio web actual ha quedado anticuado y ya es hora de actualizarlo para impulsar tu negocio?" },
+					{ content: "¿Te preparas para adentrarte en el mundo del comercio online y requieres una tienda virtual que sea segura, sólida y altamente eficiente?" },
+					{ content: "¿Cuentas con un producto excepcional y ofreces un servicio impecable, pero estás pasando desapercibido en Internet debido a deficiencias en tu estrategio de SEO?" },
+					{ content: "¿Te sientes un tanto desorientado y no sabes cómo abordar temas como el hosting, el dominio, o la creación de un logo, y buscas asesoramiento experto y confiable?" },
+					{ content: "¿Estás agotado de los videotutoriales que prometen 'Hacer tu sitio web en tres horas sin conocimientos' y estás en busca de un profesional que se encargue de todo el proceso?" },
+					{ content: "¿Te encuentras en las etapas iniciales de lanzar un proyecto empresarial y necesitas una página web que respalde tu estrategia comercial?" }
+				]}
+			title2="!Encuentra el rumbo de tu negocio¡"
+			tagline2="Estudiaré la estrategia adecuada para atraer nuevos clientes, destacar tu presencia de manera sobresaliente y hacer que tus competidores te vean como una amenaza. Mis servicios incluyen opciones de diseño web a partir de 550€."
+			image= {{ src: "/public/images/rombos.jpg", alt: "Ifondo de rombos" }}
+		/>
+
+		<Portfolio
+			title="PORTFOLIO"
+			subtitle="Mis trabajos"
+			tagline={`
+			Soy una especialista en revolucionar tu estrategia online para atraer nuevos clientes, destacar tu
+			presencia web de manera sobresaliente y hacer que tus competidores te vean como una amenaza. Mis servicios
+			incluyen opciones de diseño web a partir de 550€, planes de mantenimiento desde 50€ al mes, tiendas en 
+			línea completas desde 800€ y planes SEO avanzados diseñados especialmente para satisfacer las necesidades
+			de tu proyecto.
+			`}
+			align="center"
+			/>
+			<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-10">
+				<Card2 
+					imagen="/public/turbofans.jpg"
+					link="turbofans.es"
+					url='https://turbofans.es/'
+				/>
+				<Card2 
+					imagen="/public/workoutline.jpg"
+					link="workoutonline.es"
+					url="https://workoutonline.es/"
+				/>
+				<Card2 
+					imagen="/public/aventurapark.jpg"
+					link="aventuraparkgranvia.com"
+					url="https://aventuraparkgranvia.com/"
+				/>
+				<Card2 
+					imagen="/public/humano360.jpg"
+					link="humano360.com"
+					url="https://humano360.com/"
+				/>
+				<Card2 
+					imagen="/public/runbetter.jpg"
+					link="runbetter.es"
+					url="https://runbetter.es/"
+				/>
+				<Card2 
+					imagen="/public/anke.jpg"
+					link="ankecalistenia.com"
+					url="https://ankecalistenia.com/"
+				/>
+			</ul>
+
+			<Portfolio
+				title="BLOG"
+				subtitle="Para guiarte en el proceso"
+				tagline={`
+				En este espacio, te sumergirás en un océano de recursos y consejos diseñados para potenciar
+				tu presencia online. Nuestro blog está repleto de información valiosa que te ayudará a elevar tu sitio
+				web al siguiente nivel.
+				`}
+				align="center"
+			/>
+			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-10">
+				{blogPosts.map((post) => (
+					<div class="mb-4">
+						<BlogCard2 
+							title={post.title}
+							image={post.image}
+							link={post.link}
+						/>
+					</div>
+				))}
+			</div>
+	</main>
 </Layout>

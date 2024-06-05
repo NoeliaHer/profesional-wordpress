@@ -1,0 +1,29 @@
+---
+interface Props {
+	link?: string;
+	imagen?: string;
+  url?: string;
+  subtitle?: string
+}
+
+const { imagen, link, url, subtitle } = Astro.props;
+---
+
+<div class="mx-4 border-b mb-2">
+  <a href={url} target="_blank">
+    <li class="card text-center p-2">
+      <img src={imagen} class="rounded-lg object-cover md:h-48"/>
+      <div class="p-4">
+        <h2 class="text-lg text-blue-800 p-2">{link}</h2>
+      </div>
+    </li>
+  </a>
+  <div>{subtitle}</div>
+</div>
+
+<style>
+  .card img {
+    border-radius: 10px;
+    width: 100%;
+  }
+</style>
