@@ -5,9 +5,30 @@ import Nav from '../components/Nav.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import Headline2 from '../components/Headline2.astro';
 import Card from '../components/Card.astro';
+import Card2 from '../components/Card2.astro';
 import Features from '../components/Features.astro';
 import Features2 from '../components/Features2.astro';
 import Portfolio from '../components/Portfolio.astro';
+import BlogCard2 from '../components/BlogCard2.astro';
+
+
+const blogPosts = [
+  {
+    title: "Mantenimiento Web: La clave del exito",
+    image: "/public/images/mantenimiento_web_profesional.jpg",
+    link: "/blog/mantenimientoweb"
+  },
+  {
+    title: "Experiencia móvil perfecta: Mantenimiento para todos los dispositivos",
+    image: "/public/images/experiencia_movil.jpg",
+    link: "#"
+  },
+  {
+    title: "La importancia de una página web profesional para tu nuevo negocio",
+    image: "https://images.unsplash.com/photo-1599423300746-b62533397364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+    link: "#"
+  },
+];
 
 ---
 
@@ -107,6 +128,61 @@ import Portfolio from '../components/Portfolio.astro';
 			de tu proyecto.
 			`}
 			align="center"
-		/>
+			/>
+			<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-10">
+				<Card2 
+					imagen="/public/turbofans.jpg"
+					link="turbofans.es"
+					url='https://turbofans.es/'
+				/>
+				<Card2 
+					imagen="/public/workoutline.jpg"
+					link="workoutonline.es"
+					url="https://workoutonline.es/"
+				/>
+				<Card2 
+					imagen="/public/aventurapark.jpg"
+					link="aventuraparkgranvia.com"
+					url="https://aventuraparkgranvia.com/"
+				/>
+				<Card2 
+					imagen="/public/humano360.jpg"
+					link="humano360.com"
+					url="https://humano360.com/"
+				/>
+				<Card2 
+					imagen="/public/runbetter.jpg"
+					link="runbetter.es"
+					url="https://runbetter.es/"
+				/>
+				<Card2 
+					imagen="/public/anke.jpg"
+					link="ankecalistenia.com"
+					url="https://ankecalistenia.com/"
+				/>
+			</ul>
+
+			<Portfolio
+				title="BLOG"
+				subtitle="Para guiarte en el proceso"
+				tagline={`
+				En este espacio, te sumergirás en un océano de recursos y consejos diseñados para potenciar
+				tu presencia online. Nuestro blog está repleto de información valiosa que te ayudará a elevar tu sitio
+				web al siguiente nivel.
+				`}
+				align="center"
+			/>
+			
+			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-10">
+				{blogPosts.map((post) => (
+					<div class="mb-4">
+						<BlogCard2 
+							title={post.title}
+							image={post.image}
+							link={post.link}
+						/>
+					</div>
+				))}
+			</div>
 	</main>
 </Layout>
