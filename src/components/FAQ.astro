@@ -1,0 +1,202 @@
+---
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface Props {
+  items: FAQItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="faq-container">
+  <h2 class="faq-title">FAQS</h2>
+  {items.map(item => (
+    <details class="faq-item group">
+      <summary class="faq-question flex cursor-pointer items-center justify-between gap-1.5">
+        <h3 class="text-lg font-medium">{item.question}</h3>
+        <span class="relative size-5 shrink-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="absolute inset-0 size-5 opacity-100 group-open:opacity-0"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="absolute inset-0 size-5 opacity-0 group-open:opacity-100"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </span>
+      </summary>
+      <p class="faq-answer mt-4 leading-relaxed font-bold">
+        {item.answer}
+      </p>
+    </details>
+  ))}
+</div>
+
+<style>
+.faq-container {
+  padding: 1rem;
+}
+
+.faq-title {
+  color: #003366; /* Dark blue color */
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.faq-item {
+  border: 2px solid #003366; /* Dark blue border */
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1rem; /* Space between items */
+}
+
+.faq-question {
+  color: #003366; /* Dark blue color */
+}
+
+.faq-answer {
+  color: rgba(55, 65, 81, var(--tw-text-opacity));
+  font-weight: bold; /* Make answers bold */
+}
+
+/* Utility classes */
+.divide-y > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var (--tw-divide-y-reverse)));
+  border-bottom-width: calc(1px * var (--tw-divide-y-reverse));
+}
+
+.divide-gray-100 {
+  --tw-divide-opacity: 1;
+  border-color: rgba(229, 231, 235, var (--tw-divide-opacity));
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-gray-100 {
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 231, 235, var (--tw-border-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var (--tw-bg-opacity));
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.group > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.relative {
+  position: relative;
+}
+
+.size-5 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.group-open .opacity-100 {
+  opacity: 0;
+}
+
+.group-open .opacity-0 {
+  opacity: 1;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var (--tw-text-opacity));
+}
+
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgba(17, 24, 39, var (--tw-text-opacity));
+}
+
+.gap-1.5 {
+  gap: 0.375rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+}
+</style>

@@ -3,8 +3,34 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Headline from '../components/Headline.astro';
 import ContactForm from '../components/ContactForm.astro';
+import FAQ from '../components/FAQ.astro';
+
+const faqItems = [
+  {
+    question: "¿Con qué frecuencia debo realizar el mantenimiento web?",
+    answer: "Se recomienda realizar el mantenimiento web al menos una vez al mes para garantizar un rendimiento óptimo."
+  },
+  {
+    question: "Puedo hacer el mantenimiento web por mi cuenta o debo contratar a un profesional?",
+    answer: "Puedes realizar algunas tareas de mantenimiento por tu cuenta, pero es recomendable contar con un profesional para tareas más técnicas y críticas."
+  },
+  {
+    question: "¿Qué sucede si no realizo el mantenimiento web?",
+    answer: "Si no realizas el mantenimiento web, tu sitio puede volverse lento, inseguro y propenso a errores técnicos, lo que puede afectar negativamente la experiencia del usuario y el SEO."
+  },
+  {
+    question: "¿Cuánto tiempo lleva el mantenimiento web?",
+    answer: "El tiempo necesario para el mantenimiento web varía según la complejidad del sitio web y las tareas requeridas. Puede tomar desde unas pocas horas hasta varios días."
+  },
+    {
+    question: "¿Cómo puedo proteger mi sitio web de ataques cibernéticos?",
+    answer: "Para proteger tu sitio web de ataques cibernéticos, asegúrate de utilizar medidas de seguridad robustas, como firewalls y certificados SSL, y mantenga su software actualizado."
+  }
+];
 ---
+
 <Layout title="Profesional Wordpress">
-    <Nav />
-    <ContactForm />
-    </Layout>   
+  <Nav />
+  <ContactForm />
+  <FAQ items={faqItems} />
+</Layout>
