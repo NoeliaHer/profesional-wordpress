@@ -4,6 +4,8 @@ import Nav from '../../components/Nav.astro';
 import ContactForm from '../../components/ContactForm.astro';
 import FAQ from '../../components/FAQ.astro';
 import FeaturesBlog from '../../components/FeaturesBlog.astro';
+import CommentForm from '../../components/CommentForm.astro';
+import Footer from '../../components/Footer.astro';
 
 const faqItems = [
   {
@@ -30,27 +32,27 @@ const faqItems = [
 
 const features = [
   {
-    image: "https://img.icons8.com/ios-filled/50/000000/cursor.png", // Icono puntero ratón
+    image: "https://img.icons8.com/ios-filled/50/000000/cursor.png",
     title: "Mejora de la Experiencia del Usuario (UX)",
     description: "Un sitio web que funciona sin problemas, carga rápidamente y no presenta errores proporciona una experiencia positiva a los visitantes. Esto aumenta la retención de usuarios y fomenta la lealtad a la marca."
   },
   {
-    image: "https://img.icons8.com/ios-filled/50/000000/google-logo.png", // Icono G de Google
+    image: "https://img.icons8.com/ios-filled/50/000000/google-logo.png",
     title: "Optimización de SEO",
     description: "Los motores de búsqueda favorecen los sitios web bien mantenidos. Actualizar contenido, corregir enlaces rotos y garantizar una estructura técnica sólida puede mejorar su clasificación en los resultados de búsqueda."
   },
   {
-    image: "https://img.icons8.com/ios-filled/50/000000/security-checked.png", // Icono de seguridad
+    image: "https://img.icons8.com/ios-filled/50/000000/security-checked.png",
     title: "Seguridad en Línea",
     description: "El mantenimiento web incluye la protección contra amenazas cibernéticas. Actualizar regularmente los sistemas y las medidas de seguridad reduce el riesgo de ataques y la pérdida de datos."
   },
   {
-    image: "https://img.icons8.com/ios-filled/50/000000/loading-circle.png", // Icono de un círculo cargando
+    image: "https://img.icons8.com/ios-filled/50/000000/loading-circle.png",
     title: "Carga Rápida",
     description: "Los visitantes en línea esperan que las páginas se carguen rápidamente. La optimización de velocidad es crucial para reducir las tasas de rebote y mejorar la retención de usuarios."
   },
   {
-    image: "https://img.icons8.com/ios-filled/50/000000/checkmark.png", // Icono check blanco con fondo azul
+    image: "https://img.icons8.com/ios-filled/50/000000/checkmark.png",
     title: "Contenido Actualizado",
     description: "Mantener el contenido fresco y relevante atrae a nuevos visitantes y mantiene interesados a los existentes. Esto también demuestra autoridad en su nicho."
   },
@@ -72,13 +74,15 @@ const features = [
       </div>
     </div>
     
-    <FeaturesBlog features={features} />
+    <FeaturesBlog features={features} mainTitle="Importancia del Mantenimiento Web" subTitle="El mantenimiento web no es una tarea única, sino un proceso continuo que impulsa varios beneficios:" />
     
     <div class="additional-text">
       <p>El mantenimiento web es esencial para el éxito continuo. Garantiza que su sitio web funcione sin problemas, proporcione una experiencia positiva a los usuarios y se destaque en los motores de búsqueda. No subestime la importancia de mantener su presencia online en su mejor forma.</p>
     </div>
     
     <FAQ items={faqItems} />
+    <CommentForm />
+    <Footer />
   </section>
 </Layout>
 

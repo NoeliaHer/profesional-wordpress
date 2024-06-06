@@ -8,15 +8,17 @@ export interface Feature {
 
 export interface Props {
   features: Feature[];
+  mainTitle: string;
+  subTitle: string;
 }
 
-const { features } = Astro.props;
+const { features, mainTitle, subTitle } = Astro.props;
 ---
 
 <div class="bg-white px-2 py-10 w-full">
   <div id="features" class="container mx-auto">
-    <p class="title">Importancia del Mantenimiento Web</p>
-    <h2 class="subtitle">El mantenimiento web no es una tarea única, sino un proceso continuo que impulsa varios beneficios:</h2>
+    <p class="title">{mainTitle}</p>
+    <h2 class="subtitle">{subTitle}</h2>
     <ul class="mt-16 flex flex-wrap justify-center gap-6 text-center text-slate-700">
       {features.map(feature => (
         <li class="rounded-xl bg-white px-6 py-8 shadow-sm flex-1 max-w-xs">
