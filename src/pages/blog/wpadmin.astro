@@ -1,0 +1,80 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import CommentForm from '../../components/CommentForm.astro';
+---
+
+<Layout title="Cambia el wp-admin para añadir una capa de seguridad a tu WordPress">
+  <Nav />
+  <section class="main-content">
+    <h1 class="title">Cambia el wp-admin para añadir una capa de seguridad a tu WordPress</h1>
+    <p class="text-content">En este artículo, vamos a mostrarte cómo puedes cambiar el wp-admin en tu WordPress para agregar una capa adicional de seguridad. Además de los métodos tradicionales que mencionamos anteriormente, también puedes utilizar el plugin «Hide Login» para lograr este objetivo de manera sencilla y efectiva.</p>
+
+    
+    <h2 class="bold-title">¿Qué es el complemento Ocultar inicio de sesión?</h2>
+    <p class="text-content">El complemento Hide Login es una herramienta popular y confiable que te permite cambiar la URL de acceso al wp-admin en tu sitio web de WordPress. Al cambiar la ruta predeterminada, podrás agregar un nivel extra de seguridad al dificultar los ataques de fuerza bruta y proteger tu sitio web de posibles amenazas.</p>
+
+    <h2 class="bold-title">Cómo utilizar el plugin WPS Hide Login para cambiar el wp-admin</h2>
+    <p class="text-content">A continuación, te mostraremos cómo puedes utilizar el plugin WPS Hide Login para cambiar la URL de acceso al wp-admin:</p>
+
+    <h3 class="bold-title">Paso 1: Instalación y activación del plugin</h3>
+    <p class="text-content">Lo primero que debes hacer es instalar y activar el plugin WPS Hide Login en tu sitio web de WordPress. Puedes encontrar este plugin en el repositorio oficial de plugins de WordPress o descargarlo desde el panel de administración de tu sitio web.</p>
+
+    <h3 class="bold-title">Paso 2: Acceder a la configuración del plugin</h3>
+    <p class="text-content">Una vez que hayas activado el plugin, encontrarás una nueva opción en el menú de administración de WordPress llamada «WPS Hide Login». Haz clic en esta opción para acceder a la configuración del plugin.</p>
+
+    <h3 class="bold-title">Paso 3: Cambiar la ruta de acceso al wp-admin</h3>
+    <p class="text-content">Dentro de la configuración del plugin, verás un campo etiquetado como «Nueva URL de inicio de sesión». Aquí es donde puedes ingresar la nueva URL que deseas utilizar para acceder al wp-admin.</p>
+    <p class="text-content">Por ejemplo, si deseas cambiar la ruta de acceso a «tudominio.com/mi-nueva-ruta», simplemente ingresa «mi-nueva-ruta» en el campo correspondiente.</p>
+
+    <h3 class="bold-title">Paso 4: Guardar los cambios y probar la nueva ruta de acceso</h3>
+    <p class="text-content">Una vez que hayas ingresado la nueva URL de acceso al wp-admin, asegúrate de guardar los cambios realizados en la configuración del complemento. Luego, prueba la nueva ruta ingresando la URL en tu navegador web.</p>
+    <p class="text-content">Si todo funciona correctamente, deberías poder acceder al panel de administración de tu WordPress utilizando la nueva URL que tienes configurada. Recuerda guardar y utilizar esta nueva URL en lugar de la ruta predeterminada para futuros inicios de sesión.</p>
+
+    <p class="text-content">Cambiar el wp-admin en tu WordPress usando el plugin WPS Hide Login es una excelente manera de agregar una capa adicional de seguridad a tu sitio web. Al ocultar la ruta de acceso predeterminada, estarás dificultando los ataques de fuerza bruta y protegiendo tus datos e información confidencial.</p>
+    <p class="text-content">Recuerda que la seguridad de tu sitio web es fundamental para mantenerlo protegido y garantizar su correcto funcionamiento. Usar complementos como Hide Login es una medida efectiva para reforzar la seguridad y mantener a raya posibles amenazas.</p>
+    
+    <CommentForm />
+    <Footer />
+  </section>
+</Layout>
+
+<style>
+.title {
+  font-size: 2rem;
+  color: #125ca7; /* Dark blue color */
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: rgba(55, 65, 81, var(--tw-text-opacity)); /* Secondary color */
+  margin-bottom: 2rem;
+  line-height: 1.625;
+}
+
+.main-content {
+  padding: 2rem;
+}
+
+.bold-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000; /* Black color */
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.text-content {
+  font-size: 1rem;
+  color: rgba(55, 65, 81, var(--tw-text-opacity)); /* Secondary color */
+  margin-bottom: 1.25rem;
+  line-height: 1.625;
+}
+
+.list-disc {
+  list-style-type: disc;
+  margin-left: 1.25rem;
+}
+</style>
