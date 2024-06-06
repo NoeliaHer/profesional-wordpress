@@ -1,0 +1,100 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import FeaturesBlog from '../../components/FeaturesBlog.astro';
+import Footer from '../../components/Footer.astro';
+import DudasForm from '../../components/DudasForm.astro';
+import CommentForm from '../../components/CommentForm.astro'
+
+const features1 = [
+  {
+    image: "https://img.icons8.com/ios-filled/50/000000/design.png", // Icono diseño
+    title: "DISEÑO ADAPTABLE",
+    description: "Su sitio web debe contar con un diseño adaptable que se ajuste automáticamente al tamaño de la pantalla del dispositivo. Esto garantiza que los elementos se reorganicen de manera adecuada para una experiencia de usuario fluida."
+  },
+  {
+    image: "https://img.icons8.com/ios-filled/50/000000/image.png", // Icono Imágenes multimedia
+    title: "IMÁGENES OPTIMIZADAS PARA MÓVILES",
+    description: "Optimizar las imágenes es esencial para reducir el tiempo de carga en dispositivos móviles. Utilice formatos de imagen ligeros y comprima las imágenes para mantener su sitio ágil."
+  },
+  {
+    image: "https://img.icons8.com/ios-filled/50/000000/star-half-empty.png", // Icono estrella media coloreada media no
+    title: "PRUEBAS EN MÚLTIPLES DISPOSITIVOS",
+    description: "Antes de lanzar cualquier actualización, asegúrese de probar su sitio en una variedad de dispositivos y navegadores. Esto le permitirá identificar y solucionar problemas de visualización y rendimiento."
+  },
+];
+
+const features2 = [
+  {
+    image: "https://img.icons8.com/ios-filled/50/000000/download-2.png", // Icono dos flechas hacia abajo
+    title: "MINIMICE EL USO DE RECURSOS EXTERNOS",
+    description: "Reduzca al mínimo el número de solicitudes a recursos externos, como archivos JavaScript y hojas de estilo. Esto acelerará significativamente la carga de su sitio."
+  },
+  {
+    image: "https://img.icons8.com/ios-filled/50/000000/image.png", // Icono imagen
+    title: "OPTIMICE EL CÓDIGO Y LAS IMÁGENES",
+    description: "El código limpio y eficiente, junto con imágenes optimizadas, contribuirá a una carga más rápida de la página. Utilice herramientas de compresión y minificación para lograr esto."
+  },
+  {
+    image: "https://img.icons8.com/ios-filled/50/000000/folder-invoices.png", // Icono carpeta almacenamiento
+    title: "UTILICE EL ALMACENAMIENTO EN CACHÉ",
+    description: "Habilitar la caché en su sitio permitirá que las páginas se carguen más rápido para los usuarios que regresan. Esto mejora la experiencia general."
+  },
+];
+
+const features3 = [
+  {
+    image: "https://img.icons8.com/ios-filled/50/000000/document.png", // Icono archivo / documento
+    title: "CONTENIDO RELEVANTE Y DE CALIDAD",
+    description: "Asegúrese de que el contenido de su sitio sea relevante y útil para los usuarios móviles. Esto no solo mejora la experiencia, sino que también puede aumentar la retención de usuarios."
+  },
+  {
+    image: "https://img.icons8.com/ios-filled/50/000000/key.png", // Icono etiqueta alternativo
+    title: "PALABRAS CLAVE Y ETIQUETAS ALT",
+    description: "Optimice su contenido con palabras clave relevantes y etiquetas alt para imágenes. Esto ayudará a los motores de búsqueda a comprender y clasificar su contenido."
+  },
+  {
+    image: "https://img.icons8.com/ios/50/000000/folder-invoices--v1.png", // Icono carpeta / documento alternativo
+    title: "VELOCIDAD DE PÁGINA",
+    description: "Ya mencionamos la velocidad de carga, pero es crucial para el SEO móvil. Google favorece los sitios que se cargan rápidamente."
+  },
+];
+---
+
+<Layout title="Experiencia Móvil">
+  <Nav />
+  <section class="main-content">
+    <h1 class="title">Experiencia Móvil Perfecta: Mantenimiento para Todos los Dispositivos</h1>
+    <p class="subtitle">En el mundo actual, la presencia en internet es esencial para el éxito de cualquier empresa o proyecto. En este contexto, la experiencia móvil se ha convertido en un factor determinante para atraer y retener a los usuarios. Con la proliferación de dispositivos móviles, es crucial asegurarse de que su sitio web ofrezca una experiencia perfecta en todos ellos. En este artículo, nos adentraremos en los detalles del mantenimiento necesario para lograr una experiencia móvil perfecta.</p>
+    
+    <h2 class="title">La Importancia de una Experiencia Móvil Perfecta</h2>
+    <p class="subtitle">Antes de sumergirnos en los detalles del mantenimiento, es esencial comprender por qué una experiencia móvil perfecta es crucial. La mayoría de las personas accede a internet a través de sus dispositivos móviles, ya sea un smartphone o una tablet. Si su sitio web no se adapta de manera óptima a estas pantallas más pequeñas, corre el riesgo de perder visitantes y, en última instancia, clientes potenciales. Una experiencia móvil deficiente puede tener un impacto negativo en su tasa de rebote, lo que significa que los usuarios abandonan su sitio web rápidamente debido a la frustración. Además, los motores de búsqueda, incluido Google, valoran la usabilidad móvil al clasificar los sitios web en sus resultados de búsqueda. Esto significa que si su sitio no ofrece una experiencia móvil perfecta, puede perder su posición en los rankings de Google.</p>
+    
+    <FeaturesBlog features={features1} mainTitle="La Optimización del Diseño Responsivo" subTitle="Una parte fundamental del mantenimiento para lograr una Experiencia Móvil Perfecta es la optimización del diseño responsivo. Esto implica asegurarse de que su sitio web se vea y funcione de manera excelente en dispositivos de diferentes tamaños y resoluciones de pantalla. Aquí hay algunos consejos clave:" />
+    
+    <FeaturesBlog features={features2} mainTitle="Velocidad de Carga y Rendimiento" subTitle="La velocidad de carga de su sitio web es otro aspecto crítico para garantizar una Experiencia Móvil Perfecta. Los usuarios móviles son impacientes, y si su sitio tarda demasiado en cargar, es probable que se vayan antes de interactuar con él. Para mejorar la velocidad de carga:" />
+
+    <FeaturesBlog features={features3} mainTitle="Prácticas SEO para una Experiencia Móvil Perfecta" subTitle="Además del diseño y la velocidad de carga, el SEO desempeña un papel crucial en la Experiencia Móvil Perfecta. Aquí hay algunas estrategias clave:" />
+    <CommentForm />
+    <Footer />
+</section>
+</Layout>
+
+<style>
+.title {
+  font-size: 2rem;
+  color: #003366; /* Dark blue color */
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: rgba(55, 65, 81, var(--tw-text-opacity)); /* Secondary color */
+  margin-bottom: 2rem;
+  line-height: 1.625;
+}
+
+.main-content {
+  padding: 2rem;
+}
+</style>
