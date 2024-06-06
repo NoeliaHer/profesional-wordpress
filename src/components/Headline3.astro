@@ -1,0 +1,49 @@
+---
+import '/src/styles/global.css';
+import Button from '../components/ui/button.astro';
+
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  tagline?: string;
+  align?: 'start' | 'center';
+  image?: string | { src: string; alt: string };
+  icon?: string;
+  button?: string;
+  buttonType?: "primary" | "secondary" | "custom"; // Nueva propiedad para el tipo de botón
+  buttonLabel?: string;}
+
+const { align = 'center', tagline, title, subtitle, image, icon, button, buttonType, buttonLabel } = Astro.props;
+
+---
+
+<div class:list={['headline', align]}>
+    <div class="background-image absolute inset-0 z-0 opacity-20">
+      {image && typeof image === 'string' ? (
+        <img src={image} alt="Image" class="w-full h-full object-cover"/>
+      ) : (
+        image && <img src={image.src} alt={image.alt} class="w-full h-full object-cover" />
+      )}
+    </div>
+    <div class="relative z-10"{align}>
+      <h1 class="text-4xl text-gray-900 p-2 font-sans">{title}</h1>
+      <div class="icon-container" style="text-align: center; margin-top: 0;">
+        <i class={icon}></i>
+      </div>
+      <h2 class="text-4xl text-gray-800 p-2 font-cursive">{subtitle}</h2>
+      <p class="text-lg text-gray-800 my-2 w-40">{tagline}</p>
+      {buttonType && buttonLabel && <Button style={buttonType}>{buttonLabel}</Button>} {/* Muestra el botón si buttonType y buttonLabel están definidos */}
+    </div>
+  </div>
+
+<style>
+  p {
+    width: 800px;
+  }
+</style>
+
+
+
+
+

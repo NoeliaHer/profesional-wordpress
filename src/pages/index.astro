@@ -4,12 +4,14 @@ import Headline from '../components/Headline.astro';
 import Nav from '../components/Nav.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import Headline2 from '../components/Headline2.astro';
+import Headline3 from '../components/Headline3.astro';
 import Card from '../components/Card.astro';
 import Card2 from '../components/Card2.astro';
 import Features from '../components/Features.astro';
 import Features2 from '../components/Features2.astro';
 import Portfolio from '../components/Portfolio.astro';
 import BlogCard2 from '../components/BlogCard2.astro';
+import FeaturesSection from '../components/FeaturesSections.astro';
 
 
 const blogPosts = [
@@ -30,6 +32,27 @@ const blogPosts = [
   },
 ];
 
+const featuresSectionItems = [
+  { title: "SEO PARA TODOS", content: "En todos los proyectos que acepto, implemento un plan SEO inicial que abarca una optimización exhaustiva del código, la configuración de etiquetas h1 y h2, la mejora de los atributos ALT de las imágenes, y una indexación manual en Google." },
+  { title: "RECURSOS DE ALTA CALIDAD", content: "Siempre opto por plantillas premium de WordPress, específicamente destacando mi experiencia con DIVI. Asimismo, selecciono cuidadosamente plugins que son plenamente compatibles con esta plantilla, ofreciendo estabilidad probada en múltiples sitios web. Mi enfoque prioritario es invertir en la seguridad y estabilidad de los proyectos en los que trabajo." },
+  { title: "ADAPTABILIDAD", content: "Me enfoco exclusivamente en colaborar con pequeñas empresas, profesionales independientes, proyectos personales y startups. Por lo tanto, puedes estar seguro de que al solicitar un presupuesto, no encontrarás tarifas elevadas ni procesos impersonales como los de grandes corporaciones. Para mí, cada proyecto web no es simplemente otro en una lista, sino una oportunidad para comprender tu negocio y participar activamente en la misión de hacerlo más rentable y eficiente." },
+  { title: "SERVICIOS VARIOS", content: "Ofreceré una amplia gama de servicios a tu disposición, que incluyen diseño web, mantenimiento de WordPress, optimización SEO, desarrollo de tiendas en línea, configuración de plataformas para cursos en línea, integración de sistemas de reservas, implementación de chats en vivo y soporte técnico, entre otros." },
+  { title: "RGPD", content: "Todos los proyectos han sido completamente ajustados a las nuevas regulaciones de RGPD, lo que garantiza que todos los clientes puedan tener total tranquilidad en este aspecto." },
+  { title: "TEXTOS DE CALIDAD", content: "Doy un enfoque especial a la calidad de los textos, la ortografía, la redacción efectiva del mensaje y la coherencia en el contenido. Estoy firmemente convencida de que esto es fundamental en cada proyecto." }
+];
+
+
+const featuresSectionIcons = [
+  "fa-solid fa-search", 
+  "fa-solid fa-tools", 
+  "fa-solid fa-user-tie", 
+  "fa-solid fa-cogs", 
+  "fa-solid fa-shield-alt", 
+  "fa-solid fa-file-alt" 
+];
+
+const customSubtitle = "¡Encuentra el rumbo de tu negocio!";
+const backgroundImage = "/public/images/contratar.jpg";
 ---
 
 <Layout title="Profesional Wordpress">
@@ -183,5 +206,29 @@ const blogPosts = [
 					</div>
 				))}
 			</div>
+
+			<div class="headline relative lg:w-full flex items-center pl-20" style="height: 460px;">
+				<Headline3
+					title="AHORA YA SABES QUE HACER"
+					tagline={`
+						Si eres propietario de un pequeño negocio y te sientes abrumado por la idea de ingresar
+						al mundo digital, no dudes en contactarme. Puedes llamamer o enviarme un correo electrónico.
+						Cuéntame tu situación y lo que necesitas, estaré encantada de compartir contigo mi enfoque,
+						el proceso recomendado y las tarifas, y por supuesto, estoy dispuesta a brindarte orientación 
+						en tu camino si así lo deseas.
+						`}
+					align="start"
+					image= {{ src: "/public/images/monitor.jpg", alt: "Imagen de escritorio" }}
+					buttonType="secondary"
+					buttonLabel="¡Hablemos!"				
+				/>
+			</div>
+			<FeaturesSection 
+			title="¿POR QUÉ CONTRATARME?"
+			subtitle="LA ESENCIA DE MIS SERVICIOS"
+			items={featuresSectionItems}
+			icons={featuresSectionIcons}
+			backgroundImage={backgroundImage}
+			/>
 	</main>
 </Layout>
