@@ -1,0 +1,129 @@
+<form class="bg-white p-8 rounded-md shadow-md w-full">
+    <h2 class="text-2xl font-semibold mb-4">SOLICITANOS TU AUDITORIA WEB GRATUITA</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label for="nombre" class="sr-only">Nombre</label>
+        <input type="text" id="nombre" name="nombre" class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Nombre">
+      </div>
+      <div>
+        <label for="email" class="sr-only">Email</label>
+        <input type="email" id="email" name="email" class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Email">
+      </div>
+    </div>
+    
+    <div class="mt-4">
+      <label for="url" class="sr-only">URL de la web</label>
+      <input type="url" id="url" name="url" class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="URL de la web">
+    </div>
+    
+    <div class="mt-4">
+      <label for="interes" class="sr-only">Estoy interesad@ en que me hagan una auditoria gratuita para mi web</label>
+      <textarea id="interes" name="interes" rows="2" class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Estoy interesad@ en que me hagan una auditoria gratuita para mi web"></textarea>
+    </div>
+    
+    <div class="mt-4">
+      <label for="mensaje" class="sr-only">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Mensaje"></textarea>
+    </div>
+    
+    <div class="mt-4 flex items-start">
+      <input type="checkbox" id="privacidad" name="privacidad" class="mr-2 mt-1">
+      <label for="privacidad" class="text-gray-700">He leído y acepto la política de privacidad</label>
+    </div>
+    
+    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Enviar</button>
+</form>
+
+<style>
+.bg-white {
+  background-color: #ffffff;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.text-gray-700 {
+  color: rgba(55, 65, 81, var(--tw-text-opacity));
+}
+
+.text-gray-600 {
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
+}
+
+.w-full {
+  width: 100%;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus\:border-blue-500:focus {
+  border-color: #3b82f6;
+}
+
+.bg-blue-500 {
+  background-color: #3b82f6;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.hover\:bg-blue-600:hover {
+  background-color: #2563eb;
+}
+
+.focus\:bg-blue-600:focus {
+  background-color: #2563eb;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+</style>
