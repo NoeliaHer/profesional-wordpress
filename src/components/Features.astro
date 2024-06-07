@@ -1,10 +1,19 @@
 ---
 import Headline2 from './Headline2.astro';
-const { align = 'center', title, subtitle, items, customSubtitle } = Astro.props;
 
 interface Item {
   content: string;
 }
+
+interface Props {
+  align?: 'start' | 'center';
+  title: string;
+  subtitle?: string;
+  items: Item[];
+  customSubtitle?: string;
+}
+
+const { align = 'center', title, subtitle, items, customSubtitle } = Astro.props as Props;
 ---
 
 <Headline2 title={title} subtitle={subtitle}/>
@@ -30,4 +39,3 @@ interface Item {
         margin: 0 auto;
     }
 </style>
-

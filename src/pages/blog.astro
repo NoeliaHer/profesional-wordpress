@@ -68,15 +68,12 @@ const blogPosts = [
     <h1 class="text-3xl font-bold mb-8">Nuestro Blog</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {blogPosts.map((post) => (
-        <div class="mb-8">
-          <BlogCard 
-            title={post.title}
-            image={post.image}
-            link={post.link}
-          />
-        </div>
+        <BlogCard 
+          title={post.title}
+          image={post.image}
+          link={post.link}
+        />
       ))}
     </div>
   </section>
 </Layout>
-
