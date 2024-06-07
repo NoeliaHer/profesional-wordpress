@@ -2,9 +2,133 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Headline from '../components/Headline.astro';
-import ContactForm from '../components/ContactForm.astro';
+import CommentForm from '../components/CommentForm.astro';
+import Footer from '../components/Footer.astro';
+import Features3 from '../components/Features3.astro';
+
+const featuresItems = [
+  { content: "Auditoria SEO previa" },
+  { content: "Optimización del código de la web: etiquetas h1, h2 y metadescripciones en todas las páginas del sitio" },
+  { content: "Reestructuración de las URLs de la web para crear enlaces amigables para Google" },
+  { content: "Investigación y análisis de palabras clave" },
+  { content: "Imágenes: implementación de atributos ALT, revisión de los títulos" },
+  { content: "Estudio y revisión de enlaces internos" },
+  { content: "Mejora de la densidad de palabra clave" },
+  { content: "Mejora de la velocidad de carga de la web. Optimización HTML, CSS, Javascript" },
+  { content: "Alta en Google Webmaster Tools y envío de sitemap" },
+  { content: "Enlaces entrantes: estudio y purga de los inactivos o perjudiciales" },
+  { content: "Análisis de nicho de mercado y competencia online" },
+  { content: "Elección de palabras claves a posicionar y análisis de tendencias de búsqueda" },
+  { content: "Creación de páginas de aterrizaje (landing pages)" },
+  { content: "Creación de nuevas páginas en el sitio web optimizadas para SEO" },
+  { content: "Puesta en marcha de blog (a petición del cliente)" },
+  { content: "Optimización SEO de posts de blog" },
+  { content: "Estrategia de construcción de enlaces entrantes" },
+  { content: "Gestión de reputación online: reseñas, perfiles en Google Maps, opiniones en foros" },
+];
 ---
+
 <Layout title="Profesional Wordpress">
-    <Nav />
-  
-    </Layout>   
+  <Nav />
+  <main class="p-2">
+    <div class="headline relative lg:w-full h-screen flex items-center justify-center" style="height: 300px;">
+      <Headline
+        title="POSICIONAMIENTO"
+        subtitle='SEO'
+        align="center"
+        image={{ src: "/public/images/disenoweb.jpg", alt: "Imagen de escritorio" }}
+      />
+    </div>
+
+    <section class="container mx-auto px-5 py-24">
+      <div class="flex flex-col lg:flex-row items-start lg:items-center mb-6">
+        <img src="/public/images/seo_seo.jpg" alt="SEO Image" class="w-full lg:w-1/2 h-auto mb-8 lg:mb-0 lg:mr-8" />
+        <div class="lg:w-1/2">
+          <h2 class="text-3xl font-bold mb-4">INVIERTE EN SEO</h2>
+          <p class="text-content mb-4">
+            Aparecer en la primera página de resultados de Google es la clave para atraer un flujo constante de contactos comerciales y nuevos clientes. Sin embargo, como podrás imaginar, alcanzar esa posición privilegiada no es tarea sencilla.
+          </p>
+          <p class="text-content mb-4">
+            El trabajo SEO se asemeja a una forma de arte, requiere paciencia, un enfoque meticuloso y constancia. Desde cuidar el código y las etiquetas hasta optimizar la web, los contenidos, las palabras clave, la actividad en redes sociales y foros, así como la gestión de enlaces entrantes y salientes, construir una reputación online sólida exige un control constante y minucioso.
+          </p>
+          <p class="text-content mb-4">
+            Mi enfoque en el SEO es cuidadoso, humano, artesano y constante, abarcando desde la atención al código hasta la gestión de la huella digital y la reputación online, así como la administración de enlaces entrantes.
+          </p>
+          <p class="text-content mb-4">
+            Todos estos elementos trabajan de la mano para que tu sitio web ascienda en posiciones de manera constante y efectiva, sin apresuramientos, pero sin detenerse.
+          </p>
+          <p class="text-content mb-4">
+            Es importante destacar que NO utilizo ninguna técnica «Blackhat» que pueda generar un ascenso rápido pero que, a la larga, podría resultar en penalizaciones de Google o cambios en el algoritmo. Mi compromiso es ofrecerte un SEO auténtico, que toma su tiempo, pero que ofrece resultados duraderos y valiosos.
+          </p>
+          <p class="text-content font-bold mb-6">Desde 100€/mes</p>
+          <div class="text-center mt-8">
+            <a href="#contact" class="inline-block text-white bg-purple-600 py-2 px-4 rounded hover:bg-purple-700">Empecemos</a>
+          </div>
+        </div>
+      </div>
+      <Features3 
+        align="center"
+        title="Nuestros Servicios SEO"
+        subtitle="Optimización Integral"
+        items={featuresItems}
+      />
+
+      <!-- New Section for VENTAJAS -->
+      <section class="bg-blue-200 py-12">
+        <div class="container mx-auto px-5">
+          <h2 class="text-3xl font-bold text-center mb-4">VENTAJAS</h2>
+          <h3 class="text-2xl font-semibold text-center mb-8">Para tu negocio</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <h4 class="text-xl font-bold mb-2">RENTABILIDAD</h4>
+              <p>Una estrategia de SEO bien diseñada demuestra ser sorprendentemente rentable a medio y largo plazo. Con unos meses de dedicación intensiva y especializada, puedes lograr resultados sólidos y estables (siempre y cuando mantengas el esfuerzo), garantizando un flujo constante de clientes sin necesidad de realizar nuevas inversiones.</p>
+            </div>
+            <div class="text-center">
+              <h4 class="text-xl font-bold mb-2">TU CLIENTE</h4>
+              <p>Cuando se realizan correctamente y se eligen las palabras clave adecuadas, el SEO tiene el poder de atraer al cliente perfecto, aquel que está genuinamente interesado en tu servicio y se encuentra en tu área geográfica. Si cuentas con un sitio web bien diseñado y con textos persuasivos, será muy poco probable que este cliente potencial no te contacte. A partir de ese punto, la pelota está en tu tejado, pero el trabajo de la web y el SEO ya habrá cumplido su propósito: colocar al cliente justo en tu puerta.</p>
+            </div>
+            <div class="text-center">
+              <h4 class="text-xl font-bold mb-2">RESULTADOS</h4>
+              <p>Cuando tu sitio web se posiciona en los primeros resultados de búsqueda, experimentas un flujo constante y predecible de solicitudes de presupuesto y contactos comerciales. Esto facilita la planificación de fases de crecimiento y permite establecer planes financieros más realistas, ya que puedes medir de manera confiable el impacto y la consistencia de las interacciones comerciales generadas por tu presencia online.</p>
+            </div>
+          </div>
+          <div class="text-center mt-8">
+            <a href="#contact" class="inline-block text-white bg-purple-600 py-2 px-4 rounded hover:bg-purple-700">Empecemos</a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <CommentForm />
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+.headline {
+  height: 300px;
+}
+
+.text-content {
+  font-size: 1rem;
+  color: rgba(55, 65, 81, var(--tw-text-opacity)); /* Secondary color */
+  margin-bottom: 1.25rem;
+  line-height: 1.625;
+}
+
+.bg-blue-200 {
+  background-color: #ebf8ff; /* Light blue background */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+</style>
