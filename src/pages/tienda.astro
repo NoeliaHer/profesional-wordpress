@@ -2,9 +2,117 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Headline from '../components/Headline.astro';
-import ContactForm from '../components/ContactForm.astro';
+import CommentForm from '../components/CommentForm.astro';
+import Footer from '../components/Footer.astro';
+import Features3 from '../components/Features3.astro';
+import Headline3 from '../components/Headline3.astro';
+
+const featuresItems = [
+  { content: "Diseño y puesta en marcha de la tienda online" },
+  { content: "Optimización para móviles y tablets" },
+  { content: "Trastienda autogestionable por el propietario" },
+  { content: "Informes y estadísticas de pedidos y ventas" },
+  { content: "Creación de fichas de producto y optimización SEO avanzada: descripciones de producto, fotografías y galerías" },
+  { content: "Creación de páginas interiores (tienda, carrito, registro de usuarios, etc.)" },
+  { content: "Integración de métodos de pago: transferencia bancaria, pago contrarreembolso, Paypal, Stripe, TPV virtual, cheque" },
+  { content: "Integración de métodos de envío" },
+  { content: "Configuración de impuestos y moneda" },
+  { content: "Envío de facturas al cliente" },
+  { content: "Implementación del certificado SSL" },
+  { content: "Funcionalidades añadidas: comparador de productos, lista de deseos…" },
+  { content: "Puesta en marcha de blog integrado (a petición del cliente)" },
+  { content: "Plan SEO avanzado para fichas de producto y categorías" },
+  { content: "Alta en Google Webmaster Tools" },
+  { content: "Indexación manual en Google" },
+  { content: "Optimización de la velocidad de carga y test inicial de velocidad" },
+  { content: "Aviso de cookies y textos legales" },
+  { content: "Copias de seguridad semanales" },
+  { content: "Limpieza y optimización de bases de datos" },
+  { content: "Implementación de medidas de seguridad: antivirus y antimalware" },
+  { content: "Integración con programas de correo masivo / newsletter o boletines" },
+  { content: "Aplicación de chat en vivo" },
+];
 ---
-<Layout title="Profesional Wordpress">
-    <Nav />
-  
-    </Layout>   
+
+<Layout title="Tienda Online Profesional">
+  <Nav />
+  <main class="p-2">
+    <div class="headline relative lg:w-full h-screen flex items-center justify-center" style="height: 300px;">
+      <Headline
+        title="TIENDA ONLINE"
+        subtitle="Comercio Electrónico"
+        align="center"
+        image={{ src: "/public/images/disenoweb.jpg", alt: "Imagen de escritorio" }}
+      />
+    </div>
+
+    <section class="container mx-auto px-5 py-24">
+      <div class="flex flex-col lg:flex-row items-start lg:items-center mb-6">
+        <img src="/public/images/diseno_eco.jpg" alt="Tienda Online" class="w-full lg:w-1/2 h-auto mb-8 lg:mb-0 lg:mr-8" />
+        <div class="lg:w-1/2">
+          <h2 class="text-3xl font-bold mb-4">TARIFAS EXCLUSIVAS</h2>
+          <p class="text-content mb-4">
+            ¿Estás pensando en lanzar tu propia tienda en línea? Te proporcionaremos fichas de productos cuidadosamente optimizadas para mejorar tu visibilidad en los motores de búsqueda, además de ocuparnos de la gestión de impuestos, envíos, facturación, lista de deseos, comparador de productos y la implementación de un certificado SSL para garantizar la seguridad de la información.
+          </p>
+          <p class="text-content mb-4">
+            Además, nos encargaremos de integrar eficientemente diversas pasarelas de pago, ofreciéndote una solución completa que abarca todos los aspectos necesarios para que puedas dar tus primeros pasos exitosos en el mundo del comercio electrónico.
+          </p>
+          <p class="text-content font-bold mb-6">Desde 800€</p>
+          <div class="text-center mt-8">
+            <a href="#contact" class="inline-block text-white bg-purple-600 py-2 px-4 rounded hover:bg-purple-700">Empecemos</a>
+          </div>
+        </div>
+      </div>
+      <Features3 
+        align="center"
+        title="Nuestros Servicios para Tienda Online"
+        subtitle="Soluciones Completas"
+        items={featuresItems}
+      />
+      <div class="headline relative lg:w-full flex items-center pl-20" style="height: 460px;">
+        <Headline3
+            title="AHORA YA SABES QUE HACER"
+            tagline={`
+                Si eres propietario de un pequeño negocio y te sientes abrumado por la idea de ingresar
+                al mundo digital, no dudes en contactarme. Puedes llamamer o enviarme un correo electrónico.
+                Cuéntame tu situación y lo que necesitas, estaré encantada de compartir contigo mi enfoque,
+                el proceso recomendado y las tarifas, y por supuesto, estoy dispuesta a brindarte orientación 
+                en tu camino si así lo deseas.
+                `}
+            align="start"
+            image= {{ src: "/public/images/monitor.jpg", alt: "Imagen de escritorio" }}
+            buttonType="secondary"
+            buttonLabel="¡Hablemos!"				
+        />
+    </div>
+    </section>
+
+    <CommentForm />
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+.headline {
+  height: 300px;
+}
+
+.text-content {
+  font-size: 1rem;
+  color: rgba(55, 65, 81, var(--tw-text-opacity)); /* Secondary color */
+  margin-bottom: 1.25rem;
+  line-height: 1.625;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+</style>
