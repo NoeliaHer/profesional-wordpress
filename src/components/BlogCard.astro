@@ -1,5 +1,4 @@
 ---
-// BlogCard.astro
 export interface BlogCardProps {
   title: string;
   image: string;
@@ -8,19 +7,21 @@ export interface BlogCardProps {
 const { title, image, link } = Astro.props;
 ---
 
-<article class="relative overflow-hidden rounded-lg shadow transition hover:shadow-lg w-full aspect-square">
+<article class="relative overflow-hidden rounded-lg shadow transition hover:shadow-lg w-full">
   <img
     alt={title}
     src={image}
-    class="absolute inset-0 h-full w-full object-cover"
+    class="h-48 w-full object-cover"
   />
 
-  <div class="relative bg-gradient-to-t from-gray-900/50 to-gray-900/25 h-full flex flex-col justify-end">
-    <div class="p-4 sm:p-6">
+  <div class="relative bg-white p-4 flex flex-col justify-between">
+    <div>
       <a href={link}>
-        <h3 class="mt-0.5 text-lg text-white font-bold">{title}</h3>
+        <h3 class="text-lg text-black font-bold">{title}</h3>
       </a>
-      <a href={link} class="inline-block mt-2 text-white bg-indigo-500 py-2 px-4 rounded hover:bg-indigo-600">Leer más</a>
+    </div>
+    <div class="mt-4">
+      <a href={link} class="inline-block text-white bg-black py-2 px-4 rounded hover:bg-gray-800">Leer más</a>
     </div>
   </div>
 </article>

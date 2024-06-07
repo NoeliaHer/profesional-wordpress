@@ -41,23 +41,23 @@ const blogPosts = [
   },
   {
     title: "Por qué el mantenimiento web es crucial para el SEO y cómo mantenerse a la vanguardia",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
-    link: "#"
+    image: "/public/images/mantenimiento_seo.jpg",
+    link: "/blog/seo"
   },
   {
     title: "9 errores comunes de diseño web que están perjudicando a tu negocio online",
-    image: "https://images.unsplash.com/photo-1599423300746-b62533397364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
-    link: "#"
+    image: "/public/images/errores_web.jpg",
+    link: "/blog/errores_web"
   },
   {
     title: "La importancia del mantenimiento WordPress",
-    image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
-    link: "#"
+    image: "/public/images/profesional_wordpress.jpg",
+    link: "/blog/profesional_wordpress"
   },
   {
     title: "Hablemos de que es WordPress",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
-    link: "#"
+    image: "/public/images/modificaciones.jpg",
+    link: "/blog/modificaciones"
   },
 ];
 ---
@@ -65,7 +65,7 @@ const blogPosts = [
 <Layout title="Profesional Wordpress">
   <Nav />
   <section class="container mx-auto px-5 py-24">
-    <h1 class="text-3xl font-bold mb-8">Blog</h1>
+    <h1 class="text-3xl font-bold mb-8">Nuestro Blog</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {blogPosts.map((post) => (
         <div class="mb-8">
@@ -79,3 +79,4 @@ const blogPosts = [
     </div>
   </section>
 </Layout>
+
