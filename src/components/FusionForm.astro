@@ -1,0 +1,29 @@
+---
+import CommentForm from '../components/CommentForm.astro';
+
+
+const title = "¿TE GUSTARIA COMPARTIR TU VISIÓN DE NEGOCIO?";
+const subtitle = "Fusionemos ideas";
+const description = "Es probable que ya tengas en mente algunas ideas para mejorar tu presencia online. ¡Nos gustaría escucharte! Estamos aquí para proporcionarte orientación sin compromiso y escuchar tus necesidades o cualquier aspecto que no esté funcionando correctamente en la presencia online de tu negocio. Y si encuentras nuestras soluciones atractivas, podemos empezar a trabajar de inmediato. Nuestro objetivo es impulsar el crecimiento de tu negocio.";
+const image = "/public/images/pw.png";
+---
+
+<div class="container mx-auto py-16 px-6 text-center">
+  <h1 class="text-3xl font-bold text-purple-700 mb-4">{title}</h1>
+  <h2 class="text-xl font-bold mb-8">{subtitle}</h2>
+  <div class="flex flex-col md:flex-row items-center">
+    <div class="md:w-1/2 pr-6 text-left">
+      <p class="mb-4">{description}</p>
+      <img src={image} alt="Image" class="w-1/2 h-auto mt-4 mx-auto rounded-lg"/>
+    </div>
+    <div class="md:w-1/2 mt-8 md:mt-0">
+      <CommentForm />
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    max-width: 1200px;
+  }
+</style>

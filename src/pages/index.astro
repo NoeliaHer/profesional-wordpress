@@ -13,7 +13,7 @@ import Portfolio from '../components/Portfolio.astro';
 import BlogCard2 from '../components/BlogCard2.astro';
 import FeaturesSection from '../components/FeaturesSections.astro';
 import Footer from '../components/Footer.astro';
-
+import FusionForm from '../components/FusionForm.astro';
 
 const blogPosts = [
   {
@@ -24,12 +24,12 @@ const blogPosts = [
   {
     title: "Experiencia móvil perfecta: Mantenimiento para todos los dispositivos",
     image: "/public/images/experiencia_movil.jpg",
-    link: "#"
+    link: "/blog/experienciamovil"
   },
   {
     title: "La importancia de una página web profesional para tu nuevo negocio",
     image: "https://images.unsplash.com/photo-1599423300746-b62533397364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
-    link: "#"
+    link: "/blog/webprofesional"
   },
 ];
 
@@ -41,7 +41,6 @@ const featuresSectionItems = [
   { title: "RGPD", content: "Todos los proyectos han sido completamente ajustados a las nuevas regulaciones de RGPD, lo que garantiza que todos los clientes puedan tener total tranquilidad en este aspecto." },
   { title: "TEXTOS DE CALIDAD", content: "Doy un enfoque especial a la calidad de los textos, la ortografía, la redacción efectiva del mensaje y la coherencia en el contenido. Estoy firmemente convencida de que esto es fundamental en cada proyecto." }
 ];
-
 
 const featuresSectionIcons = [
   "fa-solid fa-search", 
@@ -230,6 +229,8 @@ const backgroundImage = "/public/images/contratar.jpg";
 			icons={featuresSectionIcons}
 			backgroundImage={backgroundImage}
 			/>
+
+			<FusionForm />
 	</main>
 	<Footer />
 </Layout>

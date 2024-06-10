@@ -7,11 +7,11 @@ export interface BlogCardProps {
 const { title, image, link } = Astro.props;
 ---
 
-<article class="relative overflow-hidden rounded-lg shadow transition hover:shadow-lg w-full">
+<article class="relative overflow-hidden rounded-lg shadow transition hover:shadow-lg w-full blog-card">
   <img
     alt={title}
     src={image}
-    class="h-48 w-full object-cover"
+    class="h-48 w-full object-cover blog-card-image"
   />
 
   <div class="relative bg-white p-4 flex flex-col justify-between">
@@ -25,3 +25,18 @@ const { title, image, link } = Astro.props;
     </div>
   </div>
 </article>
+
+<style>
+  .blog-card {
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .blog-card-image {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .blog-card:hover .blog-card-image {
+    transform: scale(1.1);
+  }
+</style>
