@@ -5,18 +5,19 @@ interface Item {
   content: string;
 }
 
-interface Props {
-  align?: 'start' | 'center';
-  title: string;
-  subtitle?: string;
-  items: Item[];
-  customSubtitle?: string;
-}
+// interface Props {
+//   align?: 'start' | 'center';
+//   title: string;
+//   subtitle?: string;
+//   tagline?: string;
+//   items: Item[];
+//   customSubtitle?: string;
+// }
 
-const { align = 'center', title, subtitle, items, customSubtitle } = Astro.props as Props;
+const { align = 'center', title, subtitle, tagline, items } = Astro.props; // Asegúrate de incluir tagline en la desestructuración
 ---
 
-<Headline2 title={title} subtitle={subtitle}/>
+<Headline2 title={title} subtitle={subtitle} tagline={tagline}/> {/* Asegúrate de pasar tagline a Headline2 */}
 <div class="container mx-auto">
     <fragment>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 contenedor items-center justify-start">
